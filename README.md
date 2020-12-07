@@ -4,6 +4,8 @@ Utility to rewrite the namespace for a PHP package to avoid conflicts in WordPre
 
 Conceived after thinking about it in [this comment](https://github.com/leonstafford/wp2static/issues/716#issuecomment-739647070).
 
+[![CircleCI](https://circleci.com/gh/leonstafford/arisebyanyothername.svg?style=svg)](https://circleci.com/gh/leonstafford/arisebyanyothername)
+
 ## Example
 
 To avoid conflicts for the Guzzle library, used by WP2Static and countless other PHP packages, when bundled up for use in a WordPress plugin/theme, I prefer the simple option of forking the package in question and rewriting all the namespaces to my own unique one, ie https://github.com/leonstafford/wp2staticguzzle with `WP2StaticGuzzle` vs the original `Guzzle`.
