@@ -4,7 +4,7 @@ Utility to rewrite the namespace for a PHP package to avoid conflicts in WordPre
 
 Conceived after thinking about it in [this comment](https://github.com/leonstafford/wp2static/issues/716#issuecomment-739647070).
 
-[![CircleCI](https://circleci.com/gh/leonstafford/arisebyanyothername.svg?style=svg)](https://circleci.com/gh/leonstafford/arisebyanyothername)
+[![CircleCI](https://circleci.com/gh/leonstafford/AriseByAnyOtherName.svg?style=svg)](https://circleci.com/gh/leonstafford/AriseByAnyOtherName)
 
 ## Example
 
