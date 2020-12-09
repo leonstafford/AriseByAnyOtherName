@@ -2,7 +2,13 @@
 
 # usage example 
 #
+#   Rewrite all namespaces in a project
+#
 #   sh modify_project renamespace ~/wp2staticguzzle GuzzleHttp WP2StaticGuzzleHttp
+#
+#   Apply transformations template to a project
+#
+#   sh modify_project applytemplate ~/wp2staticguzzle guzzlehttp
 
 ACTION=$1
 REPO_DIR=$2
@@ -48,12 +54,15 @@ then
   echo "given an input local filename, like './templates/deletions/guzzle'"
   echo "and input dir, will remove all files/dirs from the repo that are"
   echo "specified in my template"
+
+  TEMPLATE=$3
+  echo "$TEMPLATE"
+
+  /bin/sh "./templates/$TEMPLATE.sh" "$REPO_DIR"
 else
 
   echo "Unknown command, should print out usage"
 
-  echo "$TEMPLATE"
-  /bin/sh ./templates/wp2staticguzzle
 fi
 
 
