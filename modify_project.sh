@@ -8,7 +8,7 @@
 #
 #   Apply transformations template to a project
 #
-#   sh modify_project applytemplate ~/wp2staticguzzle guzzlehttp
+#   sh modify_project applytemplate ~/wp2staticguzzle wp2staticguzzle
 
 ACTION=$1
 REPO_DIR=$2
