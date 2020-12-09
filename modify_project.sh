@@ -4,11 +4,11 @@
 #
 #   Rewrite all namespaces in a project
 #
-#   sh modify_project renamespace ~/wp2staticguzzle GuzzleHttp WP2StaticGuzzleHttp
+#   sh modify_project.sh renamespace ~/wp2staticguzzle GuzzleHttp WP2StaticGuzzleHttp
 #
 #   Apply transformations template to a project
 #
-#   sh modify_project applytemplate ~/wp2staticguzzle wp2staticguzzle
+#   sh modify_project.sh applytemplate ~/wp2staticguzzle wp2staticguzzle
 
 ACTION=$1
 REPO_DIR=$2

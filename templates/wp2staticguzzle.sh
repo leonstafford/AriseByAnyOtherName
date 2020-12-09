@@ -31,4 +31,4 @@ do
 done
 
 # replace README contents
-echo 'Safely namespaced fork of [Guzzle](https://github.com/guzzle/guzzle) for use in [WP2Static](https://github.com/leonstafford/wp2static), generated with [AriseByAnyOtherName](https://github.com/leonstafford/AriseByAnyOtherName).'
+echo 'Safely namespaced fork of [Guzzle](https://github.com/guzzle/guzzle) for use in [WP2Static](https://github.com/leonstafford/wp2static), generated with [AriseByAnyOtherName](https://github.com/leonstafford/AriseByAnyOtherName).' > "${TARGET_DIR:?}/README.md"
