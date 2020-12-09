@@ -53,6 +53,7 @@ else
   echo "Unknown command, should print out usage"
 
   echo "$TEMPLATE"
+  /bin/sh ./templates/wp2staticguzzle
 fi
 
 
