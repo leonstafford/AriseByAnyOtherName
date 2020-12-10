@@ -32,3 +32,10 @@ done
 
 # replace README contents
 echo 'Safely namespaced fork of [Guzzle](https://github.com/guzzle/guzzle) for use in [WP2Static](https://github.com/leonstafford/wp2static), generated with [AriseByAnyOtherName](https://github.com/leonstafford/AriseByAnyOtherName).' > "${TARGET_DIR:?}/README.md"
+
+ORIGINAL_DESCRIPTION='Guzzle is a PHP HTTP client library'
+NEW_DESCRIPTION='Safely namespaced Guzzle for WP2Static'
+
+# replace description in composer.json
+  gsed -i "s/$ORIGINAL_DESCRIPTION/$NEW_DESCRIPTION/g" \
+   "${TARGET_DIR:?}/composer.json" 

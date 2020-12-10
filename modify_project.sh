@@ -6,6 +6,11 @@
 #
 #   sh modify_project.sh renamespace ~/wp2staticguzzle GuzzleHttp WP2StaticGuzzleHttp
 #
+#   Rewrite user/repo in composer.json
+#
+#   sh modify_project.sh  changeuserrepo ~/wp2staticguzzle \
+#     'guzzlehttp/guzzle' 'leonstafford/wp2staticguzzle'
+#
 #   Apply transformations template to a project
 #
 #   sh modify_project.sh applytemplate ~/wp2staticguzzle wp2staticguzzle
@@ -16,10 +21,8 @@ REPO_DIR=$2
 ORIGINAL_NAMESPACE=''
 NEW_NAMESPACE=''
 
-ORIGINAL_USER=''
-ORIGINAL_REPO=''
-NEW_USER=''
-NEW_REPO=''
+ORIGINAL_USERREPO=''
+NEW_USERREPO=''
 
 TEMPLATE=''
 
@@ -38,13 +41,15 @@ then
 
 elif [ "$ACTION" = "changeuserrepo" ]
 then
+  ORIGINAL_USERREPO=$3
+  NEW_USERREPO=$4
 
   echo "given an input repo user/name, output repo user/name and dir,"
   echo "will do bulk rewrites of that exact match in composer.json"
-  echo "$ORIGINAL_USER"
-  echo "$ORIGINAL_REPO"
-  echo "$NEW_USER"
-  echo "$NEW_REPO"
+
+  gsed -i "s|$ORIGINAL_USERREPO|$NEW_USERREPO|g" \
+   "$REPO_DIR/composer.json" 
+    
 
 elif [ "$ACTION" = "applytemplate" ]
 then
