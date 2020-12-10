@@ -6,14 +6,26 @@
 #
 #   sh modify_project.sh renamespace ~/wp2staticguzzle GuzzleHttp WP2StaticGuzzleHttp
 #
+#   sh modify_project.sh renamespace ~/wp2staticpromises GuzzleHttp WP2StaticGuzzleHttp
+#
+#   sh modify_project.sh renamespace ~/wp2staticpsr7 GuzzleHttp WP2StaticGuzzleHttp
+#
 #   Rewrite user/repo in composer.json
 #
 #   sh modify_project.sh  changeuserrepo ~/wp2staticguzzle \
 #     'guzzlehttp/guzzle' 'leonstafford/wp2staticguzzle'
 #
+#   sh modify_project.sh  changeuserrepo ~/wp2staticpromises \
+#     'guzzlehttp/promises' 'leonstafford/wp2staticpromises'
+#
+#   sh modify_project.sh  changeuserrepo ~/wp2staticpsr7 \
+#     'guzzlehttp/psr7' 'leonstafford/wp2staticpsr7'
+#
 #   Apply transformations template to a project
 #
 #   sh modify_project.sh applytemplate ~/wp2staticguzzle wp2staticguzzle
+#   sh modify_project.sh applytemplate ~/wp2staticpromises wp2staticpromises
+#   sh modify_project.sh applytemplate ~/wp2staticpsr7 wp2staticpsr7
 
 ACTION=$1
 REPO_DIR=$2

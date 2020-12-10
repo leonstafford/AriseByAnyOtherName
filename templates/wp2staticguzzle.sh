@@ -39,3 +39,10 @@ NEW_DESCRIPTION='Safely namespaced Guzzle for WP2Static'
 # replace description in composer.json
   gsed -i "s/$ORIGINAL_DESCRIPTION/$NEW_DESCRIPTION/g" \
    "${TARGET_DIR:?}/composer.json" 
+
+# replace guzzle promises and psr7 dependencies with own
+gsed -i "s|guzzlehttp/promises|leonstafford/wp2staticpromises|g" \
+   "${TARGET_DIR:?}/composer.json" 
+gsed -i "s|guzzlehttp/psr7|leonstafford/wp2staticpsr7|g" \
+   "${TARGET_DIR:?}/composer.json" 
+
